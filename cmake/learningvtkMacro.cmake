@@ -5,6 +5,8 @@ macro(MY_ADD_EXECUTABLE proj_name targ_name)
         vtk_module_autoinit(
             TARGETS ${targ_name} 
             MODULES ${VTK_LIBRARIES})
+    else()
+        target_link_libraries(${targ_name} PRIVATE ${VTK_LIBRARIES})
     endif()
     set_target_properties(${targ_name} PROPERTIES FOLDER ${proj_name})
 endmacro()

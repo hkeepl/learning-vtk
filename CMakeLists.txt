@@ -4,6 +4,12 @@ project(LearningVTK)
 
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
 
+find_package(VTK REQUIRED)
+if (NOT VTK_FOUND)
+  message("Skipping example: ${VTK_NOT_FOUND_MESSAGE}")
+  return ()
+endif ()
+
 include(learningvtkPrepare)
 include(learningvtkMacro)
 
