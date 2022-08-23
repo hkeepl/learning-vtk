@@ -10,9 +10,13 @@ if (NOT VTK_FOUND)
   return ()
 endif ()
 
+set(ROOT_PATH "${CMAKE_SOURCE_DIR}")
+configure_file(config.h.in "${CMAKE_BINARY_DIR}/include/config.h")
+include_directories("${CMAKE_BINARY_DIR}/include")
+
 include(learningvtkPrepare)
 include(learningvtkMacro)
 
-foreach(SUBDIR chap01 chap02 chap03 chap04 chap05)
+foreach(SUBDIR chap01 chap02 chap03 chap04 chap05 chap06)
     add_subdirectory(${SUBDIR})
 endforeach()

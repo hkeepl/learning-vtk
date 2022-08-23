@@ -5,7 +5,7 @@
 ---
 # This configuration requires clang-format 8.0 or higher.
 BasedOnStyle: LLVM
-ColumnLimit: 100
+ColumnLimit: 90
 Standard: Cpp11
 SortIncludes: false
 StatementMacros:

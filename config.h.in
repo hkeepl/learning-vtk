@@ -1,0 +1,6 @@
+#pragma once
+
+#include <string>
+
+// constexpr 相当于 char *const
+constexpr char kRooPath[] = "@ROOT_PATH@";
