@@ -17,6 +17,6 @@ include_directories("${CMAKE_BINARY_DIR}/include")
 include(learningvtkPrepare)
 include(learningvtkMacro)
 
-foreach(SUBDIR chap01 chap02 chap03 chap04 chap05 chap06 chap07)
+foreach(SUBDIR chap01 chap02 chap03 chap04 chap05 chap06 chap07 chap08)
     add_subdirectory(${SUBDIR})
 endforeach()
